@@ -1,0 +1,33 @@
+
+=== 1. Lista de adyacencia ===
+A -> B(4) C(2)
+B -> A(4) D(5)
+C -> A(2) D(8) E(10)
+D -> B(5) C(8) E(2) F(6)
+E -> C(10) D(2) F(3)
+F -> D(6) E(3)
+
+=== 2. Matriz de adyacencia ===
+       A   B   C   D   E   F
+   A   0   4   2   0   0   0
+   B   4   0   0   5   0   0
+   C   2   0   0   8  10   0
+   D   0   5   8   0   2   6
+   E   0   0  10   2   0   3
+   F   0   0   0   6   3   0
+
+=== 3. BFS desde A ===
+Orden (lista):  A, B, C, D, E, F
+Orden (matriz): A, B, C, D, E, F
+Niveles: A=0 B=1 C=1 D=2 E=2 F=3
+
+=== 4. DFS desde A ===
+Recursivo: A, B, D, C, E, F
+Iterativo: A, B, D, C, E, F
+
+=== 5. Prim desde A ===
+Prim (PriorityQueue): A-C(2) A-B(4) B-D(5) D-E(2) E-F(3)  | peso total = 16
+Prim (matriz O(V^2)): A-C(2) A-B(4) B-D(5) D-E(2) E-F(3)  | peso total = 16
+
+=== 6. Kruskal ===
+Kruskal: A-C(2) D-E(2) E-F(3) A-B(4) B-D(5)  | peso total = 16
